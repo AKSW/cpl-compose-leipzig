@@ -1,0 +1,41 @@
+store:
+  build: ./images/virtuoso-docker/
+  ports:
+    - "8890:8890"
+    - "1111:1111"
+  #expose (Expose ports without publishing them to the host machine - they’ll only be accessible to linked services)
+  environment:
+    PWDDBA: "dba"
+  # volumes:
+  #   - /path/to/db/host:/var/lib/virtuoso/db/
+
+presentation:
+  build: ./images/ontowiki-docker/
+  links:
+    - store
+  ports:
+    - "8080:80"
+
+# load:
+#   build: ../Images/Load/
+#   links:
+#     - store
+#   volumes_from:
+#     - store
+#   volumes:
+#     - /path/to/import/host:/import
+#
+# backup:
+#   build: ../Images/Backup
+#
+#   environment:
+#     GIT_REPO: "SSH Repo Link"
+#     GIT_EMAIL: "cron-backup@htwk-leipzig.de"
+#     GIT_NAME: "Cron Backup"
+#     CRONTAB: "0 0 * * *"
+#   links:
+#     - store
+#   volumes_from:
+#     - store
+#   volumes:
+#     - /path/to/ssh/host/.ssh/:/root/.ssh
