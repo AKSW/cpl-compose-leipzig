@@ -1,20 +1,27 @@
 store:
   build: ./images/virtuoso-docker/
-  ports:
-    - "8890:8890"
-    - "1111:1111"
+  # ports:
+  #   - "8890:8890"
+  #   - "1111:1111"
   #expose (Expose ports without publishing them to the host machine - they’ll only be accessible to linked services)
+  expose:
+    - "8890"
+    - "1111"
   environment:
     PWDDBA: "dba"
-  # volumes:
-  #   - /path/to/db/host:/var/lib/virtuoso/db/
+  volumes:
+    - ./data/virtuoso/:/var/lib/virtuoso/db/
 
 presentation:
   build: ./images/ontowiki-docker/
   links:
     - store
+  environment:
+
   ports:
     - "8080:80"
+  volumes:
+    - ./config/ontowiki/:/config/
 
 # load:
 #   build: ../Images/Load/
