@@ -10,7 +10,7 @@ store:
   environment:
     PWDDBA: "dba"
   volumes:
-    - ./data/virtuoso/:/var/lib/virtuoso/db/
+    - ./data/virtuoso/:/var/lib/virtuoso/db/    
 
 presentation:
   build: ./images/ontowiki-docker/
@@ -22,6 +22,15 @@ presentation:
     - "8080:80"
   volumes:
     - ./config/ontowiki/:/config/
+
+vocto:
+  build: ./images/vocto-docker/
+  ports:
+    - "8081:81"
+  volumes:
+    - ./data/vocto/:/var/www/data/
+    #- ./data/models/:/var/www/models/
+
 
 # load:
 #   build: ../Images/Load/
