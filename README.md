@@ -17,5 +17,5 @@ docker-compose -f docker-compose-development.yml up
 
 Get OntoWiki: 
 
-http://localhost/:8080
-http://localhost/:8081
+- http://localhost/:8080
+- http://localhost/:8081
