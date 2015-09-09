@@ -1,6 +1,8 @@
-# cpl-compose-leipzig
+# CPL-Compose Leipzig
 
-Getting started: 
+This repository contains some tools for handling semantic data for the catalogus professorum leipzig in a Docker stack.
+
+## Getting started: 
 
 - Install docker: https://docs.docker.com/installation/
 - Install docker-compose: https://docs.docker.com/compose/install/
@@ -15,7 +17,8 @@ git submodule update
 docker-compose -f docker-compose-development.yml build --no-cache
 docker-compose -f docker-compose-development.yml up
 
-Get OntoWiki: 
 
-- http://localhost/:8080
-- http://localhost/:8081
+## Access
+
+- OntoWiki: http://localhost/:8080/ontowiki/
+- VocTo: http://localhost/:8081/vocto/
