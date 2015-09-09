@@ -28,6 +28,7 @@ vocto:
   ports:
     - "8081:81"
   volumes:
+    - ./config/vocto/:/config/
     - ./data/vocto/:/var/www/vocto/data/
     #- ./data/models/:/var/www/models/
 
