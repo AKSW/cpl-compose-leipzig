@@ -1,0 +1,13 @@
+d2rq:
+  build: ./images/d2rq-docker/
+  container_name: d2rq
+  ports:
+    - "2222:2222"
+    - "8082:80"
+  volumes:
+    - ./data/d2rq/:/d2rq
+
+# after starting exec with to create the mapping:
+
+# docker exec -i -t d2rq bash
+
