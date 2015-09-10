@@ -107,14 +107,6 @@
 <http://catalogus-professorum.org/cpm/Forename> <http://www.w3.org/2002/07/owl#versionInfo> "2.0 stable" .
 <http://catalogus-professorum.org/cpm/Forename> <http://www.w3.org/2002/07/owl#versionInfo> "version 0.2  10.03.2008" .
 <http://catalogus-professorum.org/cpm/Forename> <http://ns.ontowiki.net/SysOnt/order> "200" .
-<http://catalogus-professorum.org/cpm/GeneralPeriod> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://catalogus-professorum.org/cpm/GeneralPeriod> <http://www.w3.org/2000/01/rdf-schema#label> "Allgemeiner Abschnitt"@de .
-<http://catalogus-professorum.org/cpm/GeneralPeriod> <http://www.w3.org/2000/01/rdf-schema#label> "General Period"@en .
-<http://catalogus-professorum.org/cpm/GeneralPeriod> <http://www.w3.org/2000/01/rdf-schema#comment> "The concept Person describes a general period of life"@en .
-<http://catalogus-professorum.org/cpm/GeneralPeriod> <http://www.w3.org/2000/01/rdf-schema#comment> "Diese Konzept beschreibt einen allgemeineren Lebensabschnitt"@de .
-<http://catalogus-professorum.org/cpm/GeneralPeriod> <http://www.w3.org/2002/07/owl#versionInfo> "0.1 initial creation date: 24.05.2007" .
-<http://catalogus-professorum.org/cpm/GeneralPeriod> <http://www.w3.org/2002/07/owl#versionInfo> "2.0 stable changed from cpm:General to cpm:GeneralPeriod on 09.09.2013" .
-<http://catalogus-professorum.org/cpm/GeneralPeriod> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://catalogus-professorum.org/cpm/PeriodOfLife> .
 <http://catalogus-professorum.org/cpm/Graduation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://catalogus-professorum.org/cpm/Graduation> <http://www.w3.org/2000/01/rdf-schema#label> "Graduation"@en .
 <http://catalogus-professorum.org/cpm/Graduation> <http://www.w3.org/2000/01/rdf-schema#label> "Abschluss"@de .
@@ -169,7 +161,7 @@
 <http://catalogus-professorum.org/cpm/School> <http://www.w3.org/2000/01/rdf-schema#comment> "Describes a school"@en .
 <http://catalogus-professorum.org/cpm/School> <http://www.w3.org/2000/01/rdf-schema#comment> "Diese Konzept beschreibt eine Schule"@de .
 <http://catalogus-professorum.org/cpm/School> <http://www.w3.org/2002/07/owl#versionInfo> "0.1 initial creation date: 19.02.2015" .
-<http://catalogus-professorum.org/cpm/School> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://catalogus-professorum.org/cpm/Body> .
+<http://catalogus-professorum.org/cpm/School> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://catalogus-professorum.org/cpm/Institution> .
 <http://catalogus-professorum.org/cpm/Office> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://catalogus-professorum.org/cpm/Office> <http://www.w3.org/2000/01/rdf-schema#label> "Amt"@de .
 <http://catalogus-professorum.org/cpm/Office> <http://www.w3.org/2000/01/rdf-schema#label> "Office"@en .
@@ -204,6 +196,7 @@
 <http://catalogus-professorum.org/cpm/Party> <http://www.w3.org/2002/07/owl#versionInfo> "2.0 stable" .
 <http://catalogus-professorum.org/cpm/Party> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://catalogus-professorum.org/cpm/Organisation> .
 <http://catalogus-professorum.org/cpm/PeriodOfLife> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://catalogus-professorum.org/cpm/PeriodOfLife> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/vocab/bio/0.1/Event> .
 <http://catalogus-professorum.org/cpm/PeriodOfLife> <http://www.w3.org/2000/01/rdf-schema#label> "Lebensabschnitt"@de .
 <http://catalogus-professorum.org/cpm/PeriodOfLife> <http://www.w3.org/2000/01/rdf-schema#label> "Period of Life"@en .
 <http://catalogus-professorum.org/cpm/PeriodOfLife> <http://www.w3.org/2000/01/rdf-schema#comment> "Diese Konzept beschreibt einen Lebensabschnitt"@de .
