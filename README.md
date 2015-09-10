@@ -22,3 +22,26 @@ docker-compose -f docker-compose-development.yml up
 
 - OntoWiki: http://localhost/:8080/ontowiki/
 - VocTo: http://localhost/:8081/vocto/
+
+
+## CPL-D2RQ
+
+create container:
+
+  docker-compose -f docker-compose-d2rq-development.yml up
+
+create database in phpmyadmin (http://localhost:8082/phpmyadmin)
+exec into container:
+
+  docker exec -i -t d2rq bash
+
+create mapping file and start server
+
+  cd /d2rq
+
+  ./generate-mapping -o mapping.ttl -u root -p password jdbc:mysql://localhost/[DB-NAME]
+
+  ./d2r-server mapping.ttl
+
+
+edit the mapping file in your host, stored in data/d2rq/
