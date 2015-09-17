@@ -1,0 +1,14 @@
+store:
+  image: mysql
+  environment:
+    MYSQL_ROOT_PASSWORD: "root"
+    MYSQL_DATABASE: "ontowiki"
+    MYSQL_USER: "ontowiki"
+    MYSQL_PASSWORD: "ontowiki"
+
+presentation:
+  build: ./images/ontowiki-mysql-docker/
+  links:
+    - store
+  ports:
+    - "8080:80"
