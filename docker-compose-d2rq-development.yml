@@ -1,28 +1,8 @@
 d2rq:
   build: ./images/d2rq-docker/
-  container_name: d2rq
   ports:
-    - "2020:2020"
-    - "8082:80"
+    - "8080:80"
   volumes:
-    - ./data/d2rq/:/d2rq
-
-# create container:
-
-  # docker-compose -f docker-compose-d2rq-development.yml up
-
-# create database in phpmyadmin (http://localhost:8082/phpmyadmin)
-# exec into container:
-
-  # docker exec -i -t d2rq bash
-
-# create mapping file and start server
-
-  # cd /d2rq
-
-  # ./generate-mapping -o mapping.ttl -u root -p password jdbc:mysql://localhost/[DB-NAME]
-
-  # ./d2r-server mapping.ttl
-
-
-# edit the mapping file in your host, stored in data/d2rq/
+    - ./config/d2rq/:/d2rq-config
+    - ./data/d2rq:/d2rq-data
+    # - ./development:/var/www/
