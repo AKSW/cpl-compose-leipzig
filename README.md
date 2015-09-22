@@ -28,10 +28,10 @@ Create container:
 
 Create database in phpmyadmin
 
-`http://localhost:8080/phpmyadmin/` See issue...
+`http://localhost:8080/phpmyadmin/` (URL adress may differ)
 
 Create mapping file or edit it. Create a RDF dump file.
 
-`http://localhost:8080/editor/` See issue..
+`http://localhost:8080/editor/` See [issue #5](https://github.com/AKSW/cpl-compose-leipzig/issues/5)
 
 Results are stored in `d2rq/results` folder.
