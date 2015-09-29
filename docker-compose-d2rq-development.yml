@@ -4,5 +4,5 @@ d2rq:
     - "8080:80"
   volumes:
     - ./config/d2rq/:/d2rq-config
-    - ./data/d2rq:/d2rq-data
+    - ./data/d2rq:/var/www/results
     # - ./development:/var/www/
