@@ -1,6 +1,6 @@
 [submodule "images"]
 	path = images
-	url = git@github.com:AKSW/cpl-docker.git
+	url = https://github.com/AKSW/cpl-docker.git
 [submodule "data/models"]
 	path = data/models
-	url = git@github.com:AKSW/cpl-models.git
+	url = https://github.com/AKSW/cpl-models.git
