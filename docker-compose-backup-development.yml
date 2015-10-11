@@ -1,0 +1,13 @@
+backup:  
+  build: ./images/backup-docker/
+  container_name: backup
+  environment:
+   #not yet implemented BACKUP_MODE: "file" # file|mysql|isql
+   BACKUP_PERIOD: "daily" # yearly|monthly|weekly|daily|hourly
+
+  # set your data and backup dir
+  volumes:  
+    #- /home/aike/aditus.catalogus-professorum.data/:/data/
+    #- /media/backup/:/backup/
+    - ./data/models/:/data/
+    - ./data/backup/:/backup/
