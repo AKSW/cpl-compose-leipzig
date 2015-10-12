@@ -11,7 +11,12 @@ Getting started:
 
 Run the following commands:
 
-git clone git@github.com:AKSW/cpl-compose-leipzig.git cd cpl-compose-leipzig/ git pull git submodule init git submodule update docker-compose -f docker-compose-development.yml build --no-cache docker-compose -f docker-compose-development.yml up
+git clone https://github.com/AKSW/cpl-compose-leipzig.git
+cd cpl-compose-leipzig/
+git pull git submodule init
+git submodule update
+docker-compose -f docker-compose-development.yml build --no-cache
+docker-compose -f docker-compose-development.yml up
 
 Access
 ------
