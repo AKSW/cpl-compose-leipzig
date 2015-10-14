@@ -1,5 +1,5 @@
 store:
-  build: ./images/virtuoso-docker/
+  image: aksw/dld-store-virtuoso7
   # ports:
   #   - "8890:8890"
   #   - "1111:1111"
@@ -13,11 +13,14 @@ store:
     - ./data/virtuoso/:/var/lib/virtuoso/db/
 
 presentation:
+  # environment:
+  #  DEFAULT_GRAPH: 'http://pfarrerbuch.comiles.eu/'
+  # image: aksw/dld-present-ontowiki
   build: ./images/ontowiki-docker/
   links:
     - store
   ports:
-    - "8080:80"
+    - '8080:80'
   volumes:
     - ./config/ontowiki/:/config/
 
