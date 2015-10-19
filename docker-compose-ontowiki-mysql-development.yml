@@ -5,6 +5,8 @@ store:
     MYSQL_DATABASE: "ontowiki"
     MYSQL_USER: "ontowiki"
     MYSQL_PASSWORD: "ontowiki"
+  volumes:
+    - ./data/mysql/:/var/lib/mysql/
 
 presentation:
   build: ./images/ontowiki-mysql-docker/
