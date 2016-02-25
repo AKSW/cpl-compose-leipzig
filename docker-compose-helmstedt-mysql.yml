@@ -1,0 +1,16 @@
+store:
+  image: mysql
+  environment:
+    MYSQL_ROOT_PASSWORD: "root"
+    MYSQL_DATABASE: "ontowiki"
+    MYSQL_USER: "ontowiki"
+    MYSQL_PASSWORD: "ontowiki"
+  volumes:
+    - ./data/mysql/:/var/lib/mysql/
+
+presentation:
+  build: ./images/helmstedt-mysql-docker/
+  links:
+    - store
+  ports:
+    - "80:80"
